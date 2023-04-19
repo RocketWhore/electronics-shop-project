@@ -34,7 +34,7 @@ class Item:
         cls.all = []
         with open('../tests/items.csv', 'r') as file:
             data = csv.DictReader(file, delimiter=",")
-            print(data)
+
             for i in data:
                 cls(i['name'], i['price'], i['quantity'])
 
@@ -49,7 +49,3 @@ class Item:
             self.__name = __name
 
 
-# print(Item.instantiate_from_csv())
-
-
-print(Item.instantiate_from_csv())
