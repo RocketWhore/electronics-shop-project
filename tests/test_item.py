@@ -22,7 +22,19 @@ def test_instantiate_from_csv():
     assert Item.all[0].price == '100'
     assert Item.all[0].quantity == '1'
 
+
 def test_name_setter():
     item = Item('apple', 1.5, 10)
     item.name = 'banana'
     assert item.name == 'banana'
+
+
+def test_calculate_total_price():
+    data = item1.calculate_total_price()
+
+    assert data == item1.price * item1.quantity
+
+
+def test_apply_discount():
+    dats = item1.apply_discount()
+    assert dats == None

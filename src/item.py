@@ -48,4 +48,25 @@ class Item:
         if len(__name) <= 10:
             self.__name = __name
 
+    def calculate_total_price(self) -> float:
+        """
+        Рассчитывает общую стоимость конкретного товара в магазине.
+        :return: Общая стоимость товара.
+                """
+        global_price = self.quantity * self.price
+        return global_price
 
+    def apply_discount(self) -> None:
+        """
+        Применяет установленную скидку для конкретного товара.
+        """
+        self.price = self.price * self.pay_rate
+
+    # print(Item.instantiate_from_csv())
+
+item1 = Item("Смартфон", 10000, 20)
+item2 = Item("Ноутбук", 20000, 5)
+# all = [item1, item2]
+Item.all.append(item1)
+Item.all.append(item2)
+print(Item.all)
