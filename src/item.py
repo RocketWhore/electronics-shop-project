@@ -67,6 +67,7 @@ class Item:
 
     # print(Item.instantiate_from_csv())
 
+
 item1 = Item("Смартфон", 10000, 20)
 item2 = Item("Ноутбук", 20000, 5)
 # all = [item1, item2]

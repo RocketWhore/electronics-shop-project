@@ -2,6 +2,7 @@
 import pytest
 
 from src.item import Item
+
 item1 = Item("Смартфон", 10000, 20)
 item2 = Item("Ноутбук", 20000, 5)
 pay_rate = 0.7
@@ -44,9 +45,10 @@ def test_apply_discount():
     dats = item1.apply_discount()
     assert dats == None
 
-def test__repr__(item):
 
+def test__repr__(item):
     assert repr(item) == "Item('Смартфон', 10000, 20)"
+
 
 def test__str__(item):
     assert str(item) == 'Смартфон'
