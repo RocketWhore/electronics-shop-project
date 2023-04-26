@@ -23,7 +23,10 @@ class Item:
         self.all.append(self)
 
     def __str__(self):
-        return f'{self.__name} {self.price} {self.quantity}'
+        return f'{self.__name}'
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
 
     @staticmethod
     def string_to_number(i):
@@ -69,4 +72,4 @@ item2 = Item("Ноутбук", 20000, 5)
 # all = [item1, item2]
 Item.all.append(item1)
 Item.all.append(item2)
-print(Item.all)
+# print(Item.all)
